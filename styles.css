@@ -17,9 +17,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    
 }
 h1, p, button, h2 {
     margin: 0 auto;
+}
+.color-val {
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+h1 {
+    font-weight: 500;
 }
 h2 {
     margin: 1600px 0 0 0;

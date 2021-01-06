@@ -40,16 +40,16 @@ function colors() {
 
 
     document.getElementById('color1').innerHTML
-        = 'rgb(' +
+        = 'rgb( ' +
         rnd1R + ', ' +
         rnd1G + ', ' +
-        rnd1B + ') ';
+        rnd1B + ' ) ';
 
 
 
     document.getElementById('color2').innerHTML
-        = 'rgb(' +
+        = 'rgb( ' +
         rnd2R + ', ' +
         rnd2G + ', ' +
-        rnd2B + ')';
+        rnd2B + ' )';
 }
