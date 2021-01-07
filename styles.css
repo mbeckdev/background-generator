@@ -24,7 +24,7 @@ body {
 h1, p, button, h2 {
     margin: 0 auto;
 }
-.color-val {
+.color-grid {
     letter-spacing: 2px;
     font-size: 25px;
 }
@@ -39,4 +39,18 @@ h2 {
     height: 680px;
     min-width: 400px;
     display: flex;
+}
+@media screen and (min-width: 650px) {
+    h1 {
+        color: blue;  /* for testing */
+    }
+    .color-grid {
+        display:grid;
+        border: 1px solid red;
+        grid-template-columns: 100px 1fr 1fr; /* 1fr */
+        column-gap: 5px;
+    }
+    .color-grid div {
+        margin: 0 auto;
+    }
 }
