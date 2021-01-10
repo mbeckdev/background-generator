@@ -93,6 +93,12 @@ function colors() {
         hex1R +
         hex1G +
         hex1B;
+
+    document.getElementById('hex-color2').innerHTML
+        = '#' +
+        hex2R +
+        hex2G +
+        hex2B;
 }
 
 function translateRGBtoHEX(rgbNumber) {
