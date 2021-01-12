@@ -104,7 +104,7 @@ function colors() {
 
     // // TRANSLATE COLORS FROM RGB TO HSL
 
-    // hsl1H = translateRGBtoHSL(rnd1R, rnd1G, rnd1B, 'H');
+    hsl1H = translateRGBtoHSL(rnd1R, rnd1G, rnd1B, 'H');
     hsl1S = translateRGBtoHSL(rnd1R, rnd1G, rnd1B, 'S');
     hsl1L = translateRGBtoHSL(rnd1R, rnd1G, rnd1B, 'L');
 
@@ -113,8 +113,8 @@ function colors() {
     // hsl2L = translateRGBtoHSL(rnd2R, rnd2G, rnd2B, 'L');
 
     document.getElementById('hsl-color1').innerHTML
-        //     = `${hsl1H}, ${hsl1S}, ${hsl1L}`;
-        = `H, ${hsl1S}%, ${hsl1L}%`;
+        = `${hsl1H}, ${hsl1S}, ${hsl1L}`;
+    // = `H, ${hsl1S}%, ${hsl1L}%`;
 
 }
 
@@ -139,10 +139,40 @@ function translateRGBtoHSL(rndR, rndG, rndB, letter) {
     let Cmax = Math.max(rPercent, gPercent, bPercent);
     let Cmin = Math.min(rPercent, gPercent, bPercent);
     let change = Cmax - Cmin;
-    let lightness = change / 2;
+    // let lightness = change / 2;
+    let luminance = (Cmax * 100 + Cmin * 100) / 2 / 100;   //L
+
+    let saturation = 0;  // a number between 0 and 1  
+    let hueInDeg = 0;
+    let hue = 0;
+
+
+    if (change == 0) {
+        saturation = 0;   // if all RGB values are the same, it's a shade of grey
+        hue = 0;  // this is a grey, so there's no color, no saturation
+    } else {
+        //check luminance and set saturation
+        if (luminance <= 0.5) {
+            saturation = (Cmax - Cmin) / (Cmax + Cmin);
+        } else {  //luminance > 0.5
+            saturation = (Cmax - Cmin) / (2 - Cmax - Cmin);
+        }
+        //set hue
+        if (rPercent == Cmax) {  //red is the highest color
+            hue = (gPercent - bPercent) / (Cmax - Cmin);
+        } else if (gPercent == Cmax) {
+            hue = 2.0 + (bPercent - rPercent) / (Cmax - Cmin);
+        } else {   // blue is the highest color
+            hue = 4.0 + (rPercent - gPercent) / (Cmax - Cmin);
+        }
+        hueInDeg = hue * 60;
+    }
 
     switch (letter) {
-        //         case 'H':
+        case 'H':
+            // if (rndR == 255)
+            return hueInDeg;
+            break;
         //             if (change == 0) {
         //                 return 0;
         //             } elseif(Cmax == rPercent) {
@@ -153,7 +183,8 @@ function translateRGBtoHSL(rndR, rndG, rndB, letter) {
         //                 return 60 * (((rPercent - gPercent) / change) + 4);
         //             }
         //             break;
-        // case 'S':
+        case 'S':
+            return saturation;
         //     if (change == 0) {
         //         return 0;
         //     } else {
@@ -162,7 +193,8 @@ function translateRGBtoHSL(rndR, rndG, rndB, letter) {
         //     }
         //     break;
         case 'L':
-            return Math.floor(lightness * 100);
+            // return Math.floor(lightness * 100);
+            return luminance;
             break;
     }
 
