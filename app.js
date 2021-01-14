@@ -108,13 +108,14 @@ function colors() {
     hsl1S = translateRGBtoHSL(rnd1R, rnd1G, rnd1B, 'S');
     hsl1L = translateRGBtoHSL(rnd1R, rnd1G, rnd1B, 'L');
 
-    // hsl2H = translateRGBtoHSL(rnd2R, rnd2G, rnd2B, 'H');
-    // hsl2S = translateRGBtoHSL(rnd2R, rnd2G, rnd2B, 'S');
-    // hsl2L = translateRGBtoHSL(rnd2R, rnd2G, rnd2B, 'L');
+    hsl2H = translateRGBtoHSL(rnd2R, rnd2G, rnd2B, 'H');
+    hsl2S = translateRGBtoHSL(rnd2R, rnd2G, rnd2B, 'S');
+    hsl2L = translateRGBtoHSL(rnd2R, rnd2G, rnd2B, 'L');
 
     document.getElementById('hsl-color1').innerHTML
         = `${hsl1H}, ${hsl1S}, ${hsl1L}`;
-    // = `H, ${hsl1S}%, ${hsl1L}%`;
+    document.getElementById('hsl-color2').innerHTML
+        = `${hsl2H}, ${hsl2S}, ${hsl2L}`;
 
 }
 
