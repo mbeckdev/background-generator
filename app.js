@@ -142,6 +142,7 @@ function translateRGBtoHSL(rndR, rndG, rndB, letter) {
     // let lightness = change / 2;
     let luminance = (Cmax * 100 + Cmin * 100) / 2 / 100;   //L
 
+
     let saturation = 0;  // a number between 0 and 1  
     let hueInDeg = 0;
     let hue = 0;
@@ -166,7 +167,28 @@ function translateRGBtoHSL(rndR, rndG, rndB, letter) {
             hue = 4.0 + (rPercent - gPercent) / (Cmax - Cmin);
         }
         hueInDeg = hue * 60;
+        //If hue becomes negative - you need to add 360 to it because a circle has 360deg
+        console.log(`H=${hueInDeg}`);
+        if (hueInDeg < 0) {
+            hueInDeg += 360;
+        }
+        // console.log(hueInDeg);
+
+
+        //round to an integer number
+        hueInDeg = hueInDeg.toFixed(0)  //looks like this does round. good.
+        // console.log(hueInDeg);
+
+        console.log(`S=${saturation}`);
+        saturation = (100 * saturation).toFixed(0);
+        // console.log(saturation);
     }
+
+    // format luminance
+    console.log(`L=${luminance}`);
+    luminance = (luminance * 100).toFixed(0);
+    // console.log(luminance);
+
 
     switch (letter) {
         case 'H':
