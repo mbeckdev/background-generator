@@ -1,7 +1,7 @@
-function har() {
-    document.getElementById('haha').innerHTML = 'My particular phone size';
-}
-har();
+// function har() {
+//     document.getElementById('haha').innerHTML = 'My particular phone size';
+// }
+// har();
 
 // var rndColor1;
 // var rndColor2;
@@ -16,7 +16,8 @@ function getRandomNum() {
     return num;
 }
 
-let places = ["bod", "phone-size"];
+// let places = ["bod", "phone-size"];
+let places = ["bod"];
 
 // VARIABLES TO HELP WITH DECIMAL NUMBERS IN RGB
 let rnd1R, rnd1G, rnd1B;

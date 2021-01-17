@@ -5,7 +5,8 @@
 }
 body {
     color: antiquewhite;
-    height: 950px;/*650px;*/
+    /* height: 950px;650px; */
+    height: 100vh;
     text-shadow: 1px 1px 0px black,
                  -1px 1px 0px black,
                  1px -1px 0px black,
@@ -25,7 +26,8 @@ h1, p, button, h2 {
     margin: 0 auto;
 }
 .color-grid {
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    /* letter-spacing: 1px; */
     font-size: 25px;
 }
 h1 {
@@ -35,34 +37,36 @@ h2 {
     margin: 1600px 0 0 0;
     background-color: black;
 }
-#phone-size{
+/* #phone-size{
     height: 680px;
     min-width: 400px;
     display: flex;
-}
+} */
 .testbox {
     height: 100px;
     width: 100px;
     /* background-color: blue; */
     
 }
-.testhsl {
+/* .testhsl {
     background-color: hsl(180, 100%, 50%);
 }
 .testrgb {
     background-color: rgb(255,255,0);
-}
+} */
 @media screen and (min-width: 650px) {
     h1 {
         color: blue;  /* for testing */
     }
     .color-grid {
         display:grid;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         grid-template-columns: 100px 1fr 1fr; /* 1fr */
         column-gap: 5px;
+        
     }
     .color-grid div {
         margin: 0 auto;
+        /* border-bottom: 1px solid black; */
     }
 }
