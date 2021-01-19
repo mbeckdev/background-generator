@@ -16,8 +16,9 @@ function getRandomNum() {
     return num;
 }
 
-// let places = ["bod", "phone-size"];
-let places = ["bod"];
+// let places = ["bod", "color-bar"];
+let places = ["color-bar"];
+// let places = ["bod"];
 
 // VARIABLES TO HELP WITH DECIMAL NUMBERS IN RGB
 let rnd1R, rnd1G, rnd1B;
@@ -114,9 +115,9 @@ function colors() {
     hsl2L = translateRGBtoHSL(rnd2R, rnd2G, rnd2B, 'L');
 
     document.getElementById('hsl-color1').innerHTML
-        = `${hsl1H}, ${hsl1S}, ${hsl1L}`;
+        = `${hsl1H}, ${hsl1S}%, ${hsl1L}%`;
     document.getElementById('hsl-color2').innerHTML
-        = `${hsl2H}, ${hsl2S}, ${hsl2L}`;
+        = `${hsl2H}, ${hsl2S}%, ${hsl2L}%`;
 
 }
 

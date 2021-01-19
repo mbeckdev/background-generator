@@ -37,11 +37,13 @@ h2 {
     margin: 1600px 0 0 0;
     background-color: black;
 }
-/* #phone-size{
-    height: 680px;
-    min-width: 400px;
+#color-bar{
+    /* height: 680px;
+    min-width: 400px; */
+    height: calc(1080px / 3); /*200px;*/
+    min-width: calc(1920px / 3); /*500px;*/
     display: flex;
-} */
+}
 .testbox {
     height: 100px;
     width: 100px;
