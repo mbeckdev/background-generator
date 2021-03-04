@@ -48,18 +48,12 @@ let deciToHex = {
   14: "E",
   15: "F",
 };
-
-function colors() {
-  rnd1R = getRandomNum();
-  rnd1G = getRandomNum();
-  rnd1B = getRandomNum();
-  rnd2R = getRandomNum();
-  rnd2G = getRandomNum();
-  rnd2B = getRandomNum();
-
+function drawBackgrounds() {
   for (var i = 0; i < places.length; i++) {
     document.getElementById(places[i]).style.backgroundImage =
-      "linear-gradient(30deg, rgb(" +
+      "linear-gradient(" +
+      gradientDeg +
+      "deg, rgb(" +
       rnd1R +
       ", " +
       rnd1G +
@@ -74,6 +68,17 @@ function colors() {
       rnd2B +
       "))";
   }
+}
+
+function colors() {
+  rnd1R = getRandomNum();
+  rnd1G = getRandomNum();
+  rnd1B = getRandomNum();
+  rnd2R = getRandomNum();
+  rnd2G = getRandomNum();
+  rnd2B = getRandomNum();
+
+  drawBackgrounds();
 
   document.getElementById("color1").textContent =
     "rgb( " + rnd1R + ", " + rnd1G + ", " + rnd1B + " ) ";
@@ -217,8 +222,11 @@ function translateRGBtoHSL(rndR, rndG, rndB, letter) {
 var slider = document.querySelector(".slider");
 var output = document.getElementById("range-num");
 output.textContent = slider.value; // Display the default slider value
+let gradientDeg = slider.value;
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function () {
   output.textContent = this.value;
+  gradientDeg = this.value;
+  drawBackgrounds();
 };
