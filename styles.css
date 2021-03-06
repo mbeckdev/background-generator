@@ -10,28 +10,36 @@
     --color-border: black;
 }
 body {
-    background-color: whitesmoke;
-    color: var(--color-main);
+
     /* height: 950px;650px; */
     height: 100vh;
-    text-shadow: 1px 1px 0px var(--color-border),
+    
+    /* text-shadow: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: whitesmoke;
+
+    color: var(--color-main);
+    color: black;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Khula', sans-serif;
+    /* text-shadow: 1px 1px 0px var(--color-border),
                  -1px 1px 0px var(--color-border),
                  1px -1px 0px var(--color-border),
                  -1px -1px 1px var(--color-border),
                  1px 0px 0px var(--color-border),
                  -1px 0px 0px var(--color-border),
                  0px 1px 0px var(--color-border),
-                 0px -1px 0px var(--color-border);
-    /* text-shadow: none; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Kanit', sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
+                 0px -1px 0px var(--color-border); */
 }
 h1, p, button, h2 {
     margin: 0 auto;
+}
+h1 {
+    font-family: 'Kanit', sans-serif;
 }
 .color-grid {
     /* letter-spacing: 2px; */
@@ -140,7 +148,7 @@ h2 {
     border-radius: 25px;
 
     background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
-
+    font-family: 'Kanit', sans-serif;
 
 }
 #btn:hover{
