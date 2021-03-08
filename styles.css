@@ -12,7 +12,7 @@
 body {
 
     /* height: 950px;650px; */
-    height: 100vh;
+    /* height: 100vh; */
     
     /* text-shadow: none; */
     display: flex;
@@ -173,6 +173,18 @@ h2 {
     position:relative;
     top: 1px;
 }
+
+#full-screen-color {
+    height: 98vh;
+    width: 100vw;
+    background-color: blue; /* test color */
+    /* border: 1px solid red; */
+}
+
+#scroll-text {
+    margin-top: 1rem;
+}
+
 .testbox {
     height: 100px;
     width: 100px;
