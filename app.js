@@ -17,7 +17,7 @@ function getRandomNum() {
 }
 
 // let places = ["bod", "color-bar"];
-let places = ["color-bar"];
+let places = ["color-bar", "full-screen-color"];
 // let places = ["bod"];
 
 // VARIABLES TO HELP WITH DECIMAL NUMBERS IN RGB
