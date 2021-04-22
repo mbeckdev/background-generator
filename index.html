@@ -19,41 +19,43 @@
 
   <body id="bod" onload="colors()">
     <h1>Random Gradient</h1>
-    <p>Click below for a random gradient</p>
+    <div id="new-color-wrapper">
+      <p>Click below for a random gradient</p>
 
-    <a id="btn" onclick="colors()">New Colors</a>
-    <!-- <div class='testhsl testbox'>hsl test</div>
+      <a id="btn" onclick="colors()">New Colors</a>
+      <!-- <div class='testhsl testbox'>hsl test</div>
     <div class='testrgb testbox'>rgb test</div> -->
-    <div class="color-grid">
-      <div>RGB</div>
-      <div id="color1" class="color-val">color1</div>
-      <div id="color2" class="color-val">color2</div>
-      <div>HEX</div>
-      <div id="hex-color1">a</div>
-      <div id="hex-color2">b</div>
-      <div>HSL</div>
-      <div id="hsl-color1">a</div>
-      <div id="hsl-color2">b</div>
-      <!-- </div>
+      <div class="color-grid">
+        <div>RGB</div>
+        <div id="color1" class="color-val">color1</div>
+        <div id="color2" class="color-val">color2</div>
+        <div>HEX</div>
+        <div id="hex-color1">a</div>
+        <div id="hex-color2">b</div>
+        <div>HSL</div>
+        <div id="hsl-color1">a</div>
+        <div id="hsl-color2">b</div>
+        <!-- </div>
      <h2 id='haha'>haha</h2> -->
-    </div>
-    <div id="color-bar">&nbsp;</div>
+      </div>
+      <div id="color-bar">&nbsp;</div>
 
-    <div id="angle-slider-container">
-      <p id="angle-label">Angle</p>
-      <input
-        type="range"
-        min="0"
-        max="360"
-        value="60"
-        class="slider"
-        id="myRange"
-      />
-    </div>
-    <div id="range-num">dur</div>
+      <div id="angle-slider-container">
+        <p id="angle-label">Angle</p>
+        <input
+          type="range"
+          min="0"
+          max="360"
+          value="60"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+      <div id="range-num">dur</div>
 
-    <div id="scroll-text">Scroll down for full screen color</div>
-    <div>&#x2193;</div>
+      <div id="scroll-text">Scroll down for full screen color</div>
+      <div>&#x2193;</div>
+    </div>
     <div id="full-screen-color"></div>
     <!-- <model-viewer></model-viewer> -->
     <script src="app.js"></script>
