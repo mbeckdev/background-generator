@@ -216,12 +216,18 @@ h2 {
   width: 100px;
   /* background-color: blue; */
 }
-/* .testhsl { */
-/* background-color: hsl(180, 100%, 50%); */
-/* } */
-/* .testrgb { */
-/* background-color: rgb(255,255,0); */
-/* } */
+
+#save-section {
+  display: flex;
+  flex-direction: row;
+}
+.a-save {
+  width: 200px;
+  background-color: blue;
+}
+.a-save button {
+  /* width: 300px; */
+}
 
 @media only screen and (min-width: 300px) {
   body {
@@ -238,11 +244,6 @@ h2 {
   /* min-width: calc(1920px / 3); */
   /* } */
   #new-color-wrapper {
-    /* padding: 0 30px; */
-    /* min-width: calc(1920px / 3); */
-    /* width: unset; */
-    /* min-width: 300px; */
-    /* max-width: 1000px; */
     width: 90vw;
   }
   #new-color-wrapper p {
